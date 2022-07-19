@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="order.css">
+        <script src="main.js"></script>
+        <title></title>
+    </head>
+    <body>
+        <header>
+            <nav>
+              <div id="nav_dashbord"><a href="index.html">dashbord</a></div> 
+              <div id="nav_client"><a href="client.html">customer</a></div>
+              <div id="nav_order"><a href="order.html">order</a></div>
+           </nav>    
+       </header>
+        <div id="logo">Tefdisign order management</div>
+       <section>
+
+        <article>
+            <table border="black">
+                <caption>order list</caption>
+                <tr>
+                    <td>number</td>
+                    <td>product name</td>
+                    <td>price</td>
+                    <td>payment date</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td><script>document.write(+order1.productName)</script></td>
+                    <td><script>document.write(+order1.price)</script></td>
+                    <td><script>document.write(+order1.paymentDate)</script></td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td><script>document.write(+order2.productName)</script></td>
+                    <td><script>document.write(+order2.price)</script></td>
+                    <td><script>document.write(+order2.paymentDate)</script></td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td><script>document.write(+order3.productName)</script></td>
+                    <td><script>document.write(+order3.price)</script></td>
+                    <td><script>document.write(+order3.paymentDate)</script></td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td><script>document.write(+order4.productName)</script></td>
+                    <td><script>document.write(+order4.price)</script></td>
+                    <td><script>document.write(+order4.paymentDate)</script></td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td><script>document.write(+order5.productName)</script></td>
+                    <td><script>document.write(+order5.price)</script></td>
+                    <td><script>document.write(+order5.paymentDate)</script></td>
+                </tr>
+                
+            </table>
+        </article>
+ 
+        <aside>
+            <h1>Add a new order </h1>
+            <form method="post"action="traitement.js">
+                <p>
+                    <label for="price"></label>
+                    <input type="text" name="price" placeholder="price" maxlength="20">
+                </p>
+                <p>
+                    <label for="date"></label>
+                    <input type="text" name="date" placeholder="payment date" maxlength="20">
+                </p>
+                <p>
+                    <label for="product"></label>
+                    <input type="text" name="product" placeholder="product name" maxlength="20">
+                </p>
+                <p><input type="submit" value="save"></p>
+            </form>
+
+        </aside>
+       </section> 
+    </body>
+</html>

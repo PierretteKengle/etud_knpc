@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+            <meta charset="utf-8">
+            <link rel="stylesheet" href="style.css"/>
+            <!--<link rel="stylesheet" href="C:\Users\DELL\Desktop\Projet1_Adonis\pierrette\font-awesome-4.7.0\css\font-awesome.min.css">-->
+            
+        <script src="main.js"></script>  
+    </head>
+    <body>
+        <header>
+             <nav>
+               <div id="nav_dashbord"><a href="index.html">dashbord</a></div> 
+               <div id="nav_client"><a href="client.html">customer</a></div>
+               <div id="nav_order"><a href="order.html">order</a></div>
+            </nav>    
+        </header>
+        <div id="logo">Tefdisign order management</div>
+      <!-- <i class="fa fa-facebook-square" style="color: rgba(15, 203, 236, 0.842) ; font-size: 1em;" ></i> --> 
+        
+           <div class="presentation">
+           <div class="client"> <script>document.write('Number of client : ' +customer.length)</script></div>
+            <div class="order"><script>document.write('Total number of order : ' +order.length)</script></div>
+            <div class="attente">pending order 0</div>
+            </div>
+        <section>
+            <aside>
+                <table border="black">
+                    <caption>liste des cinq derniers clients</caption> 
+                    <tr>
+                        <td>number</td>
+                        <td>first name</td>
+                        <td>last name</td>
+                        <td>email</td>
+                        <td>telephone number</td>
+                                        
+                    <tr>
+                        <td>1</td>
+                        <td><script>document.write(+customer1.firstName)</script></td>
+                        <td><script>document.write(+customer1.lastName)</script></td>
+                        <td><script>document.write(+customer1.email)</script></td>
+                        <td><script>document.write(+customer1.telephoneNumber)</script></td>
+                    </tr>                   
+                    <tr>
+                        <td>2</td>
+                        <td><script>document.write(+customer2.firstName)</script></td>
+                        <td><script>document.write(+customer2.lastName)</script></td>
+                        <td><script>document.write(+customer2.email)</script></td>
+                        <td><script>document.write(+customer2.telephoneNumber)</script></td>
+                    </tr> 
+                    <tr>
+                        <td>3</td>
+                        <td><script>document.write(+customer3.firstName)</script></td>
+                        <td><script>document.write(+customer3.lastName)</script></td>
+                        <td><script>document.write(+customer3.email)</script></td>
+                        <td><script>document.write(+customer3.telephoneNumber)</script></td>
+                    </tr>  
+                    <tr>
+                        <td>4</td>
+                        <td><script>document.write(+customer4.firstName)</script></td>
+                        <td><script>document.write(+customer4.lastName)</script></td>
+                        <td><script>document.write(+customer4.email)</script></td>
+                        <td><script>document.write(+customer4.telephoneNumber)</script></td>
+                    </tr> 
+                    <tr>
+                        <td>5</td>
+                        <td><script>document.write(+customer5.firstName)</script></td>
+                        <td><script>document.write(+customer5.lastName)</script></td>
+                        <td><script>document.write(+customer5.email)</script></td>
+                        <td><script>document.write(+customer5.telephoneNumber)</script></td>
+                    </tr>   
+                                  
+                </table>
+            </aside>
+
+            <article>
+                <table border="black">
+                <caption>order list</caption>
+                <tr>
+                    <td>number</td>
+                    <td>product name</td>
+                    <td>price</td>
+                    <td>payment date</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td><script>document.write(+order1.productName)</script></td>
+                    <td><script>document.write(+order1.price)</script></td>
+                    <td><script>document.write(+order1.paymentDate)</script></td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td><script>document.write(+order2.productName)</script></td>
+                    <td><script>document.write(+order2.price)</script></td>
+                    <td><script>document.write(+order2.paymentDate)</script></td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td><script>document.write(+order3.productName)</script></td>
+                    <td><script>document.write(+order3.price)</script></td>
+                    <td><script>document.write(+order3.paymentDate)</script></td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td><script>document.write(+order4.productName)</script></td>
+                    <td><script>document.write(+order4.price)</script></td>
+                    <td><script>document.write(+order4.paymentDate)</script></td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td><script>document.write(+order5.productName)</script></td>
+                    <td><script>document.write(+order5.price)</script></td>
+                    <td><script>document.write(+order5.paymentDate)</script></td>
+                </tr>
+                
+            </table>
+            </article>
+        </section>       
+    </body>
+</html>
