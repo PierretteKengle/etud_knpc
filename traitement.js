@@ -3,12 +3,26 @@ let form = document.getElementById('soumission_customer');
 let tBody = document.createElement("tbody");
 document.getElementById('tableau').appendChild(tBody) ;
 
-let customerKeys = ["firstName", "lastName", "email", "telephoneNumber"]
-function gestionTableauClient(tab){
+
+/**
+ * erase the content of the array
+ */
+function emptyTable(){
     let trs = document.getElementById('tableau').querySelectorAll('tr:not(.entete)');
     for (var k=0; k<trs.length;k++){
         trs[k].remove();
     }
+}
+
+
+let customerKeys = ["firstName", "lastName", "email", "telephoneNumber"]
+
+/**
+ * Display the list of customer
+ * @param {Array} tab the list to display
+ */
+function gestionTableauClient(tab){
+    emptyTable();
     for (var i=0; i<tab.length;i++){
 
         let tR = document.createElement("tr");
@@ -20,6 +34,33 @@ function gestionTableauClient(tab){
         }
         tBody.appendChild(tR);
     }
+}
+
+function nouveauGetionClient(){
+    emptyTable();
+    tab.forEach(function(customer){
+
+        let tR = document.createElement("tr");
+
+        let tdFirstName = document.createElement("td");
+        tdFirstName.innerHTML = customer.firstName;
+        tR.appendChild(tdFirstName);
+
+        let tdlastName = document.createElement("td");
+        tdlastName.innerHTML = customer.lastName;
+        tR.appendChild(tdlastName);
+
+         let tdmailName = document.createElement("td");
+        tdmailName.innerHTML = customer.email;
+        tR.appendChild(tdmailName);
+        
+        let tdphone = document.createElement("td");
+        tdphone.innerHTML = customer.telephoneNumber;
+        tR.appendChild(tdphone);
+
+        tBody.appendChild(tR);
+    })
+
 }
 
 
@@ -38,7 +79,8 @@ form.addEventListener('submit', function(e)
     console.log(tab, 'fgg');
 
     // mise a j
-    gestionTableauClient(tab);
+    //gestionTableauClient(tab);
+    nouveauGetionClient();
 
    // console.log(gestionTableauClient);
     //console.log(customer);
