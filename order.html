@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <link rel="stylesheet" href="order.css">
-        <script src="main.js"></script>
+       
         <title></title>
     </head>
     <body>
@@ -18,44 +18,15 @@
        <section>
 
         <article>
-            <table border="black">
+            <table border="black" id="order_table" class="monTableau">
                 <caption>order list</caption>
-                <tr>
-                    <td>number</td>
+                <tr class="entete">
                     <td>product name</td>
-                    <td>price</td>
+                    <td> price</td>
                     <td>payment date</td>
+                    <td>validation de la commande</td>
                 </tr>
-                <tr>
-                    <td>1</td>
-                    <td class="produceName1"></td>
-                    <td class="price1"></td>
-                    <td class="paymentDate1"></td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td class="produceName12"></td>
-                    <td class="price2"></td>
-                    <td class="paymentDate2"></td>
-                </tr>
-                <tr>
-                    <td>3</td>
-                    <td class="produceName3"></td>
-                    <td class="price3"></td>
-                    <td class="paymentDate3"></td>
-                </tr>
-                <tr>
-                    <td>4</td>
-                    <td class="produceName4"></td>
-                    <td class="price4"></td>
-                    <td class="paymentDate4"></td>
-                </tr>
-                <tr>
-                    <td>5</td>
-                    <td class="produceName5"></td>
-                    <td class="price5"></td>
-                    <td class="paymentDate5"></td>
-                </tr>
+               
                 
             </table>
         </article>
@@ -64,21 +35,28 @@
             <h1>Add a new order </h1>
             <form method="post"action="" id="soumission_order">
                 <p>
+                    <label for="product"></label>
+                    <input type="text" name="product" placeholder="product name" maxlength="20">
+                </p>
+
+
+                <p>
                     <label for="price"></label>
                     <input type="text" name="price" placeholder="price" maxlength="20">
                 </p>
+
                 <p>
                     <label for="date"></label>
                     <input type="text" name="date" placeholder="payment date" maxlength="20">
                 </p>
-                <p>
-                    <label for="product"></label>
-                    <input type="text" name="product" placeholder="product name" maxlength="20">
-                </p>
+              
                 <p><input type="submit" value="save"></p>
             </form>
 
         </aside>
-       </section> 
+       </section>
+       
+       <script src="main.js"></script>
+       <script src="traitement.js"></script>
     </body>
 </html>

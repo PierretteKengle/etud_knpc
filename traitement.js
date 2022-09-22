@@ -1,14 +1,15 @@
 let tab = new Array();
-let form = document.getElementById('soumission_customer');
+let cForm = document.getElementById('soumission_customer')
+let oForm = document.getElementById('soumission_order')
 let tBody = document.createElement("tbody");
 document.getElementById('tableau').appendChild(tBody) ;
-
+document.getElementById('order_table').appendChild(tBody);
 
 /**
  * erase the content of the array
  */
 function emptyTable(){
-    let trs = document.getElementById('tableau').querySelectorAll('tr:not(.entete)');
+    let trs = document.getElementsByClassName('monTableau').querySelectorAll('tr:not(.entete)');
     for (var k=0; k<trs.length;k++){
         trs[k].remove();
     }
@@ -21,7 +22,7 @@ let customerKeys = ["firstName", "lastName", "email", "telephoneNumber"]
  * Display the list of customer
  * @param {Array} tab the list to display
  */
-function gestionTableauClient(tab){
+/***function gestionTableauClient(tab){
     emptyTable();
     for (var i=0; i<tab.length;i++){
 
@@ -34,14 +35,17 @@ function gestionTableauClient(tab){
         }
         tBody.appendChild(tR);
     }
-}
+}*/
 
 function nouveauGetionClient(){
     emptyTable();
     tab.forEach(function(customer){
 
         let tR = document.createElement("tr");
-
+/**
+ * creation de l'objet 'td' 
+ * et remplissage du tableau par les clients
+ */
         let tdFirstName = document.createElement("td");
         tdFirstName.innerHTML = customer.firstName;
         tR.appendChild(tdFirstName);
@@ -65,18 +69,17 @@ function nouveauGetionClient(){
 
 
 
-
-form.addEventListener('submit', function(e)
+cForm.addEventListener("submit", function(e)
 {
     e.preventDefault();
     e.stopPropagation();
     let customer = new Customer()
-    customer.firstName = form.elements["name"].value;
-    customer.lastName = form.elements["surname"].value;
-    customer.email = form.elements["mail"].value;
-    customer.telephoneNumber =  form.elements["phone"].value;
+    customer.firstName = cForm.elements["name"].value;
+    customer.lastName = cForm.elements["surname"].value;
+    customer.email = cForm.elements["mail"].value;
+    customer.telephoneNumber =  cForm.elements["phone"].value;
     tab.push(customer);
-    console.log(tab, 'fgg');
+    console.log(tab);
 
     // mise a j
     //gestionTableauClient(tab);
@@ -89,5 +92,44 @@ form.addEventListener('submit', function(e)
     document.getElementsByClassName('mail1').innerHtml = +customer.email;
     document.getElementsByClassName('telephone1').innerHtml = +customer.telephoneNumber;*/
 
+})
+
+function getOrder(){
+    emptyTable();
+    tab.forEach(function(order){
+        let tR = document.createElement("tr");
+        /**
+         * creation de l'objet 'td' 
+         * et remplissage du tableau par les commandes productName, price, paymentDate
+         */
+                let tdProductName = document.createElement("td");
+                tdProductName.innerHTML = order.productName;
+                tR.appendChild(tdProductName);
+        
+                let tdPrice = document.createElement("td");
+                tdPrice.innerHTML = order.price;
+                tR.appendChild(tdPrice);
+        
+                 let tdPaymentDate = document.createElement("td");
+                 tdPaymentDate.innerHTML = order.paymentDate;
+                tR.appendChild(tdPaymentDate);
+                
+                      
+                tBody.appendChild(tR);
+    })
+
+};
+
+
+
+oForm.addEventListener('submit', function(a){
+    a.preventDefault();
+    a.stopPropagation();
+    let order = new Order()
+    order.productName = oForm.elements["product"].value;
+    order.price = oForm.elements["price"].value;
+    order.paymentDate = oForm.elements["date"].value;
+    tab.push(order);
+    console.log(tab);
 })
 
