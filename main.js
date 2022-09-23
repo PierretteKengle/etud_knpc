@@ -9,11 +9,12 @@ class Customer{
     
     }; 
 class  Order{
-       constructor (productName, price, paymentDate)
+       constructor (productName, price, paymentDate, validation)
  {
         this.productName=productName;
         this.price=price;
         this.paymentDate=paymentDate;
+        this.validation=validation;
  }
 
 };
