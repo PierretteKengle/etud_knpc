@@ -26,8 +26,7 @@ document.querySelector('#order_table').appendChild(tBody);
                  let tdPaymentDate = document.createElement("td");
                  tdPaymentDate.innerHTML = order.paymentDate;
                 tR.appendChild(tdPaymentDate);
-                
-                      
+                                      
                 tBody.appendChild(tR);
     })
 
