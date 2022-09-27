@@ -93,7 +93,30 @@ table {
     color: rgb(0, 0, 0);
   }
 
-
+  footer{
+    height: 200px;
+    margin-left: 15px;
+    margin-right: 15px;
+    border-radius: 15px;
+    text-align: center;
+    background-color: rgb(211, 199, 199);
+    background-attachment: fixed;
+  
+  }
+  #contact{
+    padding-top: 50px;
+    font-family:'Brush Script MT','Agency FB',sans-serif ;
+    font-size: 2.5rem;
+  }
+  .facebook:hover{
+    font-size: 15px;
+  }
+  .twitter:hover{
+    font-size: 15px;
+  }
+  .whatsapp:hover{
+    font-size: 15px;
+  }
 
 
 

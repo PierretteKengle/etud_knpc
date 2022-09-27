@@ -31,9 +31,26 @@ let tBody = document.createElement("tbody");
  */
 function emptyTable(){
         let exception = document.querySelectorAll('tr:not(.entete)');
-    let trs = document.getElementsByClassName('monTableau').exception;
-    for (var k=0; k<trs.length;k++){
-        trs[k].remove();
+        console.log(exception);//verification du contenu de esception
+
+
+    let trs = document.getElementsByClassName('monTableau');//recuperation des deux tableaux
+    console.log(trs);
+
+
+    for (var k=0; k < trs.length;k++){
+        /**
+         * pour ces tableaux, on recupère tout les tr en dehors de ceux qui ont 'entete' comme class
+         */
+        let trNotEntete = trs[k].querySelectorAll('tr:not(.entete)');    
+        
+        /**
+         * suppression des elements pour le tableau en question
+         */
+        trNotEntete.forEach((el)=>{
+         el.remove();
+        });
+        //az.remove();
     }
 }
 
