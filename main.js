@@ -1,21 +1,19 @@
-class Customer{
-        constructor (firstName, lastName, email, telephoneNumber)
-    {
-        this.firstName=firstName;
-        this.lastName=lastName;
-        this.email=email;
-        this.telephoneNumber=telephoneNumber;
-    }
-    
-    }; 
-class  Order{
-       constructor (productName, price, paymentDate, validation)
- {
-        this.productName=productName;
-        this.price=price;
-        this.paymentDate=paymentDate;
-        this.validation=validation;
- }
+class Customer {
+        constructor(firstName, lastName, email, telephoneNumber) {
+                this.firstName = firstName;
+                this.lastName = lastName;
+                this.email = email;
+                this.telephoneNumber = telephoneNumber;
+        }
+
+};
+class Order {
+        constructor(productName, price, paymentDate, validation) {
+                this.productName = productName;
+                this.price = price;
+                this.paymentDate = paymentDate;
+                this.validation = validation;
+        }
 
 };
 
@@ -23,35 +21,32 @@ class  Order{
 let tBody = document.createElement("tbody");
 
 
-//document.querySelector('')
-
-
 /**
  * erase the content of the array
  */
-function emptyTable(){
+function emptyTable() {
         let exception = document.querySelectorAll('tr:not(.entete)');
-        console.log(exception);//verification du contenu de esception
+        // console.log(exception);verification du contenu de esception
 
 
-    let trs = document.getElementsByClassName('monTableau');//recuperation des deux tableaux
-    console.log(trs);
+        let trs = document.getElementsByClassName('monTableau');//recuperation des deux tableaux
+        //     console.log(trs);
 
 
-    for (var k=0; k < trs.length;k++){
-        /**
-         * pour ces tableaux, on recupère tout les tr en dehors de ceux qui ont 'entete' comme class
-         */
-        let trNotEntete = trs[k].querySelectorAll('tr:not(.entete)');    
-        
-        /**
-         * suppression des elements pour le tableau en question
-         */
-        trNotEntete.forEach((el)=>{
-         el.remove();
-        });
-        //az.remove();
-    }
+        for (var k = 0; k < trs.length; k++) {
+                /**
+                 * pour ces tableaux, on recupère tout les tr en dehors de ceux qui ont 'entete' comme class
+                 */
+                let trNotEntete = trs[k].querySelectorAll('tr:not(.entete)');
+
+                /**
+                 * suppression des elements pour le tableau en question
+                 */
+                trNotEntete.forEach((el) => {
+                        el.remove();
+                });
+                //az.remove();
+        }
 }
 
 
@@ -80,4 +75,3 @@ function emptyTable(){
 
 
 
- 
