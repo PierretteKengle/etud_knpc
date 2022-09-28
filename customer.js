@@ -1,21 +1,37 @@
 let customerArray = new Array();
 let form = document.querySelector('#soumission_customer');
-document.querySelector('#tableau').appendChild(tBody) ;
+document.querySelector('#tableau').appendChild(tBody);
 
 
 /**
  * enregistrement des clients
  */
 
- function nouveauGetionClient(){
+function nouveauGetionClient() {
     emptyTable();
-    customerArray.forEach(function(customer){
+
+
+    /**
+     * window.localStorage.setItem('user', JSON.stringify(person));
+     * stockage des informations du client
+     */
+    if (typeof (Storage) !== "undefined") {
+        // Code for localStorage
+        window.localStorage.setItem('customerList', JSON.stringify(customerArray));
+
+    }
+    //else {
+    //     // No web storage Support.
+
+    // }
+    customerArray.forEach(function (customer) {
+
 
         let tR = document.createElement("tr");
-/**
- * creation de l'objet 'td' 
- * et remplissage du tableau par les clients
- */
+        /**
+         * creation de l'objet 'td' 
+         * et remplissage du tableau par les clients
+         */
         let tdFirstName = document.createElement("td");
         tdFirstName.innerHTML = customer.firstName;
         tR.appendChild(tdFirstName);
@@ -24,10 +40,10 @@ document.querySelector('#tableau').appendChild(tBody) ;
         tdlastName.innerHTML = customer.lastName;
         tR.appendChild(tdlastName);
 
-         let tdmailName = document.createElement("td");
+        let tdmailName = document.createElement("td");
         tdmailName.innerHTML = customer.email;
         tR.appendChild(tdmailName);
-        
+
         let tdphone = document.createElement("td");
         tdphone.innerHTML = customer.telephoneNumber;
         tR.appendChild(tdphone);
@@ -41,14 +57,14 @@ document.querySelector('#tableau').appendChild(tBody) ;
 /**
  * l'evenement sur l'enregistrement d'un client
  */
-form.addEventListener('submit',function(e){
+form.addEventListener('submit', function (e) {
     e.preventDefault();
     e.stopPropagation();
     let customer = new Customer()
     customer.firstName = form.elements["name"].value;
     customer.lastName = form.elements["surname"].value;
     customer.email = form.elements["mail"].value;
-    customer.telephoneNumber =  form.elements["phone"].value;
+    customer.telephoneNumber = form.elements["phone"].value;
     customerArray.push(customer);
     console.log(customerArray);
 
@@ -56,14 +72,5 @@ form.addEventListener('submit',function(e){
     //gestionTableauClient(tab);
     nouveauGetionClient();
 
-   // console.log(gestionTableauClient);
-    //console.log(customer);
-   /* document.getElementsByClassName('firstname1').innerHtml = +customer.firstName;
-    document.getElementsByClassName('lastname1').innerHtml = +customer.lastName;
-    document.getElementsByClassName('mail1').innerHtml = +customer.email;
-    document.getElementsByClassName('telephone1').innerHtml = +customer.telephoneNumber;*/
 
 })
-
-
-

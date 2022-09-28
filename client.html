@@ -1,72 +1,78 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>customer list</title>
-        <meta charset="utf-8">
-        <link rel="stylesheet" href="client.css">
 
-    </head>
-    <body>
-        <header>
-            <nav>
-              <div id="nav_dashbord"><a href="index.html">dashbord</a></div> 
-              <div id="nav_client"><a href="client.html">customer</a></div>
-              <div id="nav_order"><a href="order.html">order</a></div>
-           </nav>    
-       </header>
-        <div id="logo">Tefdisign order management</div>
-        <section>
-            <article>
-                <table border="black" id="tableau" class="monTableau">
-                    <caption>liste des cinq derniers clients</caption>                   
-                        <tr class="entete">
-                            <td>first name</td>
-                            <td>last name</td>
-                            <td>email</td>
-                            <td>telephone number</td>
-                        </tr> 
-                    
-                </table>
-            </article>
-            <aside>
-                <!--formulaire-->
-                <form method="post" action="" id="soumission_customer">
-                    
-                        <legend>information of client </legend>
-                    
-                    <p>
-                        <label for="name"></label>
-                        <input type="text" id="nom" name="name" placeholder="client first name" maxlength="20">
-                    </p>
-                    <p>
-                        <label for="surname"></label>
-                        <input type="text" id="prenom" name="surname" placeholder="last name" maxlength="20">
-                    </p>
-                    <p>
-                        <label for="mail"></label>
-                        <input type="email" id="adresse" name="mail" placeholder="email" maxlength="60">
-                    </p>
-                    <p>
-                        <label for="phone"></label>
-                        <input type="tel" id="tele" name="phone" placeholder="telephone number" maxlength="20">
-                    </p>
-                    <p><input type="submit"  value="save"></p>
-                
-                </form>
-            </aside>
-        </section>
+<head>
+    <title>customer list</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="./awersome/font-awesome-4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="client.css">
 
-        <footer>
-            <h2 id="contact">-------Contactez nous----------</h2>
-            <p>
-               <a href="#" class="facebook"  ><i class="fa fa-facebook-square fa-3x" style="color: rgba(11, 7, 131, 0.961);"></i></a>  
-                <a href="#" class="twitter"><i class="fa fa-twitter-square fa-3x" style="color: rgba(11, 143, 237, 0.863);"></i></a>
-                <a href="#" class="whatsapp"><i class="fa fa-whatsapp fa-3x" style="color: rgb(22, 187, 88);"></i></a>
-            </p>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div id="nav_dashbord"><a href="index.html">dashbord</a></div>
+            <div id="nav_client"><a href="client.html">customer</a></div>
+            <div id="nav_order"><a href="order.html">order</a></div>
+        </nav>
+    </header>
+    <div id="logo">Tefdisign order management</div>
+    <section>
+        <article>
+            <table border="black" id="tableau" class="monTableau">
+                <caption>liste des cinq derniers clients</caption>
+                <tr class="entete">
+                    <td>first name</td>
+                    <td>last name</td>
+                    <td>email</td>
+                    <td>telephone number</td>
+                </tr>
+
+            </table>
+        </article>
+        <aside>
+            <!--formulaire-->
+            <form method="post" action="" id="soumission_customer">
+
+                <legend>information of client </legend>
+
+                <p>
+                    <label for="name"></label>
+                    <input type="text" id="nom" name="name" placeholder="client first name" maxlength="20">
+                </p>
+                <p>
+                    <label for="surname"></label>
+                    <input type="text" id="prenom" name="surname" placeholder="last name" maxlength="20">
+                </p>
+                <p>
+                    <label for="mail"></label>
+                    <input type="email" id="adresse" name="mail" placeholder="email" maxlength="60">
+                </p>
+                <p>
+                    <label for="phone"></label>
+                    <input type="tel" id="tele" name="phone" placeholder="telephone number" maxlength="20">
+                </p>
+                <p><input type="submit" value="save"></p>
+
+            </form>
+        </aside>
+    </section>
+
+    <footer>
+        <h2 id="contact">-------Contactez nous----------</h2>
+        <p>
+            <a href="#" class="facebook"><i class="fa fa-facebook-square fa-3x"
+                    style="color: rgba(11, 7, 131, 0.961);"></i></a>
+            <a href="#" class="twitter"><i class="fa fa-twitter-square fa-3x"
+                    style="color: rgba(11, 143, 237, 0.863);"></i></a>
+            <a href="#" class="whatsapp"><i class="fa fa-whatsapp fa-3x" style="color: rgb(22, 187, 88);"></i></a>
+        </p>
 
 
-        </footer>
-        <script src="main.js"></script>
-        <script src="customer.js"></script>
-    </body>
+    </footer>
+    <script src="main.js"></script>
+    <script src="customer.js"></script>
+</body>
+
 </html>

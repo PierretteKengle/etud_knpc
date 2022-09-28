@@ -1,135 +1,73 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title></title>
-            <meta charset="utf-8">
-            <link rel="stylesheet" href="./awersome/font-awesome-4.7.0/css/font-awesome.min.css"/>
-            <link rel="stylesheet" href="style.css"/>
-   </head>
-    <body>
-        <header>
-             <nav>
-               <div id="nav_dashbord"><a href="index.html">dashbord</a></div> 
-               <div id="nav_client"><a href="client.html">customer</a></div>
-               <div id="nav_order"><a href="order.html">order</a></div>
-            </nav>    
-        </header>
-        <div id="logo">Tefdisign order management</div>
-        
-           <div class="presentation">
-             <div class="client">20 CLIENTS</div>
-             <div class="order">10 COMMANDES OK</div>
-             <div class="attente">10 COMMANDES N-OK</div>
-            </div>
-        <section>
-            <aside>
-                <table border="black">
-                    <caption>liste des cinq derniers clients</caption> 
-                    <tr>
-                        <td>number</td>
-                        <td>first name</td>
-                        <td>last name</td>
-                        <td>email</td>
-                        <td>telephone number</td>
-                                        
-                    <tr>
-                        <td>1</td>
-                        <td class="firstname1"></td>
-                        <td class="lastname1"></td>
-                        <td class="mail1"></td>
-                        <td class="telephone1"></td>
-                    </tr>                   
-                    <tr>
-                        <td>2</td>
-                        <td class="firstname2"></td>
-                        <td class="lastname2"></td>
-                        <td class="mail2"></td>
-                        <td class="telephone2"></td>
-                    </tr>
-                    <tr>
-                        <td>3</td>
-                        <td class="firstname3"></td>
-                        <td class="lastname3"></td>
-                        <td class="mail3"></td>
-                        <td class="telephone3"></td>
-                    </tr> 
-                    <tr>
-                        <td>4</td>
-                        <td class="firstname4"></td>
-                        <td class="lastname4"></td>
-                        <td class="mail4"></td>
-                        <td class="telephone4"></td>
-                    </tr>
-                    <tr>
-                        <td>5</td>
-                        <td class="firstname5"></td>
-                        <td class="lastname5"></td>
-                        <td class="mail5"></td>
-                        <td class="telephone5"></td>
-                    </tr>  
-                                  
-                </table>
-            </aside>
 
-            <article>
-                <table border="black">
+<head>
+    <title></title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="./awersome/font-awesome-4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div id="nav_dashbord"><a href="index.html">dashbord</a></div>
+            <div id="nav_client"><a href="client.html">customer</a></div>
+            <div id="nav_order"><a href="order.html">order</a></div>
+        </nav>
+    </header>
+    <div id="logo">Tefdisign order management</div>
+
+    <div class="presentation">
+        <div class="client"></div>
+        <div class="order"></div>
+        <div class="attente">pending</div>
+    </div>
+    <section>
+        <aside>
+            <table border="black" id="customerDashboard">
+                <caption>liste des cinq derniers clients</caption>
+                <tr>
+                    <td>first name</td>
+                    <td>last name</td>
+                    <td>email</td>
+                    <td>telephone number</td>
+                </tr>
+
+            </table>
+        </aside>
+
+        <article>
+            <table border="black" id="orderDashboard">
                 <caption>order list</caption>
                 <tr>
-                    <td>number</td>
                     <td>product name</td>
                     <td>price</td>
                     <td>payment date</td>
                 </tr>
-                <tr>
-                    <td>1</td>
-                    <td class="produceName1"></td>
-                    <td class="price1"></td>
-                    <td class="paymentDate1"></td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td class="produceName12"></td>
-                    <td class="price2"></td>
-                    <td class="paymentDate2"></td>
-                </tr>
-                <tr>
-                    <td>3</td>
-                    <td class="produceName3"></td>
-                    <td class="price3"></td>
-                    <td class="paymentDate3"></td>
-                </tr>
-                <tr>
-                    <td>4</td>
-                    <td class="produceName4"></td>
-                    <td class="price4"></td>
-                    <td class="paymentDate4"></td>
-                </tr>
-                <tr>
-                    <td>5</td>
-                    <td class="produceName5"></td>
-                    <td class="price5"></td>
-                    <td class="paymentDate5"></td>
-                </tr>
-                
             </table>
-            </article>
-        </section>  
-        
-        
-
-        <footer>
-            <h2 id="contact">-------Contactez nous----------</h2>
-            <p>
-               <a href="#" class="facebook"  ><i class="fa fa-facebook-square fa-3x" style="color: rgba(11, 7, 131, 0.961);"></i></a>  
-                <a href="#" class="twitter"><i class="fa fa-twitter-square fa-3x" style="color: rgba(11, 143, 237, 0.863);"></i></a>
-                <a href="#" class="whatsapp"><i class="fa fa-whatsapp fa-3x" style="color: rgb(22, 187, 88);"></i></a>
-            </p>
+        </article>
+    </section>
 
 
-        </footer>
+
+    <footer>
+        <h2 id="contact">-------Contactez nous----------</h2>
+        <p>
+            <a href="https://www.facebook.com/profile.php?id=100039881052772" class="facebook"><i
+                    class="fa fa-facebook-square fa-3x" style="color: rgba(11, 7, 131, 0.961);"></i></a>
+            <a href="#" class="twitter"><i class="fa fa-envelope-o   fa-3x"
+                    style="color: rgba(11, 143, 237, 0.863);"></i></a>
+            <a href="#" class="whatsapp"><i class="fa fa-whatsapp fa-3x" style="color: rgb(22, 187, 88);"></i></a>
+        </p>
 
 
-        <script src="main.js"></script>
-    
-    </body>
+    </footer>
+
+
+    <script src="main.js"></script>
+    <script src="script.js"></script>
+
+</body>
+
 </html>

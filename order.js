@@ -7,27 +7,37 @@ document.querySelector('#order_table').appendChild(tBody);
  * enregistrement des commandes
  */
 
- function getOrder(){
+function getOrder() {
     emptyTable();
-    orderArray.forEach(function(order){
+
+       /**
+     * stockage des informations des commmandes
+     */
+        if (typeof (Storage) !== "undefined") {
+            // Code for localStorage
+            window.localStorage.setItem('orderList', JSON.stringify(orderArray));
+    
+        }
+        
+    orderArray.forEach(function (order) {
         let tR = document.createElement("tr");
         /**
          * creation de l'objet 'td' 
          * et remplissage du tableau par les commandes 
          */
-                let tdProductName = document.createElement("td");
-                tdProductName.innerHTML = order.productName;
-                tR.appendChild(tdProductName);
-        
-                let tdPrice = document.createElement("td");
-                tdPrice.innerHTML = order.price;
-                tR.appendChild(tdPrice);
-        
-                 let tdPaymentDate = document.createElement("td");
-                 tdPaymentDate.innerHTML = order.paymentDate;
-                tR.appendChild(tdPaymentDate);
-                                      
-                tBody.appendChild(tR);
+        let tdProductName = document.createElement("td");
+        tdProductName.innerHTML = order.productName;
+        tR.appendChild(tdProductName);
+
+        let tdPrice = document.createElement("td");
+        tdPrice.innerHTML = order.price;
+        tR.appendChild(tdPrice);
+
+        let tdPaymentDate = document.createElement("td");
+        tdPaymentDate.innerHTML = order.paymentDate;
+        tR.appendChild(tdPaymentDate);
+
+        tBody.appendChild(tR);
     })
 
 };
@@ -36,7 +46,7 @@ document.querySelector('#order_table').appendChild(tBody);
  * gere l'evenement sur les commandes
  */
 
-oform.addEventListener('submit', function(a){
+oform.addEventListener('submit', function (a) {
     a.preventDefault();
     a.stopPropagation();
     let order = new Order()
@@ -47,5 +57,4 @@ oform.addEventListener('submit', function(a){
     console.log(orderArray);
     getOrder();
 })
-
 
