@@ -1,6 +1,7 @@
 let customerArray = new Array();
 let form = document.querySelector('#soumission_customer');
-document.querySelector('#tableau').appendChild(tBody);
+let CtBody = document.createElement("tbody");
+document.querySelector('#tableau').appendChild(CtBody);
 
 
 /**
@@ -48,7 +49,7 @@ function nouveauGetionClient() {
         tdphone.innerHTML = customer.telephoneNumber;
         tR.appendChild(tdphone);
 
-        tBody.appendChild(tR);
+        CtBody.appendChild(tR);
     })
 
 }

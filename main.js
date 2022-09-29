@@ -17,10 +17,6 @@ class Order {
 
 };
 
-
-let tBody = document.createElement("tbody");
-
-
 /**
  * erase the content of the array
  */

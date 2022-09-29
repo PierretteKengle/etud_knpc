@@ -1,6 +1,7 @@
 let orderArray = new Array();
 let oform = document.querySelector('#soumission_order');
-document.querySelector('#order_table').appendChild(tBody);
+let OtBody = document.createElement("tbody");
+document.querySelector('#order_table').appendChild(OtBody);
 
 
 /**
@@ -37,7 +38,7 @@ function getOrder() {
         tdPaymentDate.innerHTML = order.paymentDate;
         tR.appendChild(tdPaymentDate);
 
-        tBody.appendChild(tR);
+        OtBody.appendChild(tR);
     })
 
 };
