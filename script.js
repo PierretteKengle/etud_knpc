@@ -9,6 +9,7 @@ function dasboardCustomer() {
     emptyTable();
     //recuperation des informations du clients dans le localstorage
     let customerLocal = JSON.parse(window.localStorage.getItem('customerList'));
+   //petite verification: console.log(customerLocal);
     if (customerLocal != null) {
 
         customerLocal.forEach(function (customer) {
@@ -37,9 +38,10 @@ function dasboardCustomer() {
             customerTBody.appendChild(tR);
         })
     }
-    document.querySelector('.client').innerHTML = customerLocal.length + ' ' + 'clients';
+    document.querySelector('.client').innerHTML = customerLocal.length + ' ' + 'customer';
 
-}
+};
+
 dasboardCustomer();
 
 
@@ -78,7 +80,7 @@ function dasboardOrder() {
             orderTBody.appendChild(tR);
         })
     }
-    document.querySelector('.order').innerHTML = orderLocal.length + ' ' + 'commandes';
+    document.querySelector('.order').innerHTML = orderLocal.length + ' ' + 'Order';
 
 
 }

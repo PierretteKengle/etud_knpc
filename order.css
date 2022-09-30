@@ -1,5 +1,5 @@
 .big-banner {
-  background-image: url('./chambre.jpg');
+  background-image: url('./Order.png');
   background-attachment: fixed;
   background-size: cover;
 }
@@ -9,7 +9,7 @@
   font-family: 'Matura MT Script Capitals', 'Palace Script MT';
   font-size: 3.5rem;
   padding-bottom: 50px;
-  padding-top: 100px;
+  padding-top: 140px;
 }
 a {
   text-decoration: none;
@@ -45,12 +45,11 @@ section {
 }
 
 footer {
-  height: 190px;
+  height: 150px;
   width: 100%;
   text-align: center;
   background-color: rgb(211, 199, 199);
   background-attachment: fixed;
-
 }
 
 #contact {
