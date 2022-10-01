@@ -57,5 +57,9 @@ oform.addEventListener('submit', function (a) {
     orderArray.push(order);
     console.log(orderArray);
     getOrder();
+    oform.elements["product"].value= '';
+    oform.elements["price"].value='';
+    oform.elements["date"].value='';
+
 })
 

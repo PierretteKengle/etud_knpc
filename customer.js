@@ -72,6 +72,8 @@ form.addEventListener('submit', function (e) {
     // mise a j
     //gestionTableauClient(tab);
     nouveauGetionClient();
-
-
+    form.elements["name"].value = '';
+    form.elements["surname"].value= '';
+    form.elements["mail"].value= '';
+    form.elements["phone"].value= '';
 })

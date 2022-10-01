@@ -6,13 +6,14 @@ customerDashboard.appendChild(customerTBody);
  * affichage des clients dans le dashboard
  */
 function dasboardCustomer() {
-    emptyTable();
+    
     //recuperation des informations du clients dans le localstorage
     let customerLocal = JSON.parse(window.localStorage.getItem('customerList'));
    //petite verification: console.log(customerLocal);
     if (customerLocal != null) {
 
         customerLocal.forEach(function (customer) {
+            console.log(customer);
 
             let tR = document.createElement("tr");
             /**
@@ -42,7 +43,7 @@ function dasboardCustomer() {
 
 };
 
-dasboardCustomer();
+
 
 
 let orderTBody = document.createElement("tbody");
@@ -53,7 +54,7 @@ orderDashboard.appendChild(orderTBody);
  * affichage des commandes dans le dashboard
  */
 function dasboardOrder() {
-    emptyTable();
+    //emptyTable();
     //recuperation des informations des commandes dans le localstorage
     let orderLocal = JSON.parse(window.localStorage.getItem('orderList'));
     if (orderLocal != null) {
@@ -84,6 +85,9 @@ function dasboardOrder() {
 
 
 }
+
+emptyTable();
+dasboardCustomer();
 dasboardOrder();
 
 

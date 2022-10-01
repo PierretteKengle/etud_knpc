@@ -11,14 +11,16 @@
 </head>
 
 <body>
-    <div class="big-banner">
+    <div class="bg-white">
         <div class=" container row">
             <nav class="col navbar navbar-expand-lg bg-dark navbar-light " style="position: fixed ; width: 100%;">
-                <a href="#"><i class="fa fa-home text-warning fa-5x">Tefdisign </i></a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent"
+                <a href="#"><i class="fa fa-home text-warning fa-4x">Tefdisign </i></a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
                     aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
+
                 <div id="navbarContent" class="collapse navbar-collapse">
                     <ul class="navbar-nav">
                         <li class="nav-item active"><a class="nav-link text-light font-weight-bold text-uppercase px-3"
@@ -43,7 +45,7 @@
 
 
         <section class="d-flex flex-lg-row justify-content-around text-body">
-            <aside>
+            <aside class=" bg-light border border-4 m-4 p-2 shadow-sm">
                 <table class="table  table-stiped table-hover 
                  table-responsive-sm monTableau" id="customerDashboard">
                     <caption style="caption-side: top;">Customer list</caption>
@@ -58,10 +60,10 @@
                 </table>
             </aside>
 
-            <article>
+            <article class=" bg-light border border-4 m-4 p-2 shadow-sm">
                 <table class="table  table-stiped table-hover  table-responsive-sm 
                 monTableau" id="orderDashboard">
-                    <caption style="caption-side: top;">order list</caption>
+                    <caption style="caption-side: top;">Order list</caption>
                     <thead>
                         <tr class="entete" style="background-color: rgba(250, 5, 242, 0.679) ;">
                             <th scope="col">product name</th>
@@ -87,6 +89,9 @@
 
     </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+        crossorigin="anonymous"></script>
     <script src="main.js"></script>
     <script src="script.js"></script>
 

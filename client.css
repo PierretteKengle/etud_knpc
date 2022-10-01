@@ -1,9 +1,3 @@
-.big-banner {
-  background-image: url('./Customer.png');
-  background-attachment: fixed;
-  background-size: cover;
-}
-
 #logo {
   text-align: center;
   font-family: 'Matura MT Script Capitals', 'Palace Script MT';
@@ -26,11 +20,7 @@ a:focus {
   color: rgba(212, 31, 116, 0.808);
 }
 
-section {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-}
+
 
 caption {
   padding: 10px;
