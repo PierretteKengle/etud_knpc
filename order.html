@@ -53,20 +53,28 @@
             <aside class=" bg-light border border-4 m-4 p-2 shadow-sm">
                 
                 <form method="post" action="" id="soumission_order">
-                    <fieldset>
+                    <fieldset class="d-flex flex-lg-column ">
                     <legend class="text-body">Add a new order</legend>
-                    <p>
+                    
+                    <div class="col-8">
                         <label for="product" class="form-label">Product name:</label>
                         <input type="text" class="form-control" name="product" placeholder="product name" maxlength="20">
+                    </div>
 
+                        <div class="col-8">
                         <label for="price" class="form-label">Price:</label>
                         <input type="text" class="form-control" name="price" placeholder="price" maxlength="20">
+                    </div>
 
+                        <div class="col-8">
                         <label for="date" class="form-label">Payment date:</label>
                         <input type="date" class="form-control" name="date" placeholder="payment date" maxlength="20">
-                    
-                    <p><input type="submit" value="save"></p>
-                    </p>
+                    </div>
+
+                        <div class="col-8">
+                    <input type="submit" class="btn btn-outline-dark" value="save">
+                </div>
+
                 </fieldset>
                 </form>
 

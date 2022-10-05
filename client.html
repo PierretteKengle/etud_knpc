@@ -33,9 +33,13 @@
             </nav>
         </div>
         <div id="logo">Tefdisign order management</div>
+
         <section class="d-flex flex-lg-row justify-content-around">
+
             <article class=" bg-light border border-4 m-4 p-2 shadow-sm">
+
                 <table class="table  table-stiped table-hover  table-responsive-sm monTableau" id="tableau">
+
                     <caption class="text-body" style="caption-side: top;">Customer list</caption>
                     <thead>
                         <tr class="entete" style="background-color: rgba(250, 5, 242, 0.679) ;">
@@ -47,33 +51,41 @@
                     </thead>
                 </table>
             </article>
+            
             <aside class=" bg-light border border-4 m-4 p-2 shadow-sm">
                 <!--formulaire-->
                 <form method="post" action="" id="soumission_customer">
 
-                    <fieldset >
+                    <fieldset class="d-flex flex-lg-column ">
                         <legend class="text-body">Add a new customer </legend>
-
-                        <p>
+                        
+                        <div class="col-8">
                             <label for="name" class="form-label">Name:</label>
                             <input type="text" class="form-control" id="nom" name="name" placeholder="client first name"
                                 maxlength="20">
+                            </div>
 
+                                <div class="col-8">
                             <label for="surname" class="form-label">Surname:</label>
                             <input type="text" class="form-control" id="prenom" name="surname" placeholder="last name"
                                 maxlength="20">
+                            </div>
 
+                                <div class="col-8">
                             <label for="mail" class="form-label">E-mail:</label>
                             <input type="email" class="form-control" id="adresse" name="mail" placeholder="email"
                                 maxlength="60">
+                            </div>
 
+                                <div class="col-8">
                             <label for="phone" class="form-label">Telephone number:</label>
                             <input type="tel" class="form-control" id="tele" name="phone" placeholder="telephone number"
                                 maxlength="20">
+                            </div>
 
-                            <p><input type="submit" value="save"></p>
-                        </p>
-
+                            <div class="col-8">
+                             <input type="submit" class="btn btn-outline-dark" value="save"> 
+                        </div>
                     </fieldset>
                 </form>
             </aside>
