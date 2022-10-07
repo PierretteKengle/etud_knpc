@@ -8,38 +8,42 @@ document.querySelector('#order_table').appendChild(OtBody);
  * enregistrement des commandes
  */
 
-function getOrder() {
+function getOrder(o) {
     emptyTable();
 
-       /**
-     * stockage des informations des commmandes
-     */
-        if (typeof (Storage) !== "undefined") {
-            // Code for localStorage
-            window.localStorage.setItem('orderList', JSON.stringify(orderArray));
-    
-        }
-        
-    orderArray.forEach(function (order) {
-        let tR = document.createElement("tr");
-        /**
-         * creation de l'objet 'td' 
-         * et remplissage du tableau par les commandes 
-         */
-        let tdProductName = document.createElement("td");
-        tdProductName.innerHTML = order.productName;
-        tR.appendChild(tdProductName);
+    /**
+  * stockage des informations des commmandes
+  */
+    if (typeof (Storage) !== "undefined") {
+        // Code for localStorage
+        const localOrderArray = JSON.parse(window.localStorage.getItem('orderList'));
+        localOrderArray.push(o);
 
-        let tdPrice = document.createElement("td");
-        tdPrice.innerHTML = order.price;
-        tR.appendChild(tdPrice);
+        window.localStorage.setItem('orderList', JSON.stringify(localOrderArray));
 
-        let tdPaymentDate = document.createElement("td");
-        tdPaymentDate.innerHTML = order.paymentDate;
-        tR.appendChild(tdPaymentDate);
 
-        OtBody.appendChild(tR);
-    })
+
+        localOrderArray.forEach(function (order) {
+            let tR = document.createElement("tr");
+            /**
+             * creation de l'objet 'td' 
+             * et remplissage du tableau par les commandes 
+             */
+            let tdProductName = document.createElement("td");
+            tdProductName.innerHTML = order.productName;
+            tR.appendChild(tdProductName);
+
+            let tdPrice = document.createElement("td");
+            tdPrice.innerHTML = order.price;
+            tR.appendChild(tdPrice);
+
+            let tdPaymentDate = document.createElement("td");
+            tdPaymentDate.innerHTML = order.paymentDate;
+            tR.appendChild(tdPaymentDate);
+
+            OtBody.appendChild(tR);
+        })
+    }
 
 };
 
@@ -54,12 +58,13 @@ oform.addEventListener('submit', function (a) {
     order.productName = oform.elements["product"].value;
     order.price = oform.elements["price"].value;
     order.paymentDate = oform.elements["date"].value;
-    orderArray.push(order);
+    //orderArray.push(order);
     console.log(orderArray);
-    getOrder();
-    oform.elements["product"].value= '';
-    oform.elements["price"].value='';
-    oform.elements["date"].value='';
+    getOrder(order);
+    oform.elements["product"].value = '';
+    oform.elements["price"].value = '';
+    oform.elements["date"].value = '';
 
 })
+
 

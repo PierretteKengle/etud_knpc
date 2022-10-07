@@ -8,7 +8,8 @@ document.querySelector('#tableau').appendChild(CtBody);
  * enregistrement des clients
  */
 
-function nouveauGetionClient() {
+function nouveauGetionClient(c) {
+
     emptyTable();
 
 
@@ -18,40 +19,39 @@ function nouveauGetionClient() {
      */
     if (typeof (Storage) !== "undefined") {
         // Code for localStorage
-        window.localStorage.setItem('customerList', JSON.stringify(customerArray));
+        const localcustomerArray = JSON.parse(window.localStorage.getItem('customerList'));
+        localcustomerArray.push(c)
 
+
+        window.localStorage.setItem('customerList', JSON.stringify(localcustomerArray));
+
+        localcustomerArray.forEach(function (customer) {
+
+
+            let tR = document.createElement("tr");
+            /**
+             * creation de l'objet 'td' 
+             * et remplissage du tableau par les clients
+             */
+            let tdFirstName = document.createElement("td");
+            tdFirstName.innerHTML = customer.firstName;
+            tR.appendChild(tdFirstName);
+
+            let tdlastName = document.createElement("td");
+            tdlastName.innerHTML = customer.lastName;
+            tR.appendChild(tdlastName);
+
+            let tdmailName = document.createElement("td");
+            tdmailName.innerHTML = customer.email;
+            tR.appendChild(tdmailName);
+
+            let tdphone = document.createElement("td");
+            tdphone.innerHTML = customer.telephoneNumber;
+            tR.appendChild(tdphone);
+
+            CtBody.appendChild(tR);
+        })
     }
-    //else {
-    //     // No web storage Support.
-
-    // }
-    customerArray.forEach(function (customer) {
-
-
-        let tR = document.createElement("tr");
-        /**
-         * creation de l'objet 'td' 
-         * et remplissage du tableau par les clients
-         */
-        let tdFirstName = document.createElement("td");
-        tdFirstName.innerHTML = customer.firstName;
-        tR.appendChild(tdFirstName);
-
-        let tdlastName = document.createElement("td");
-        tdlastName.innerHTML = customer.lastName;
-        tR.appendChild(tdlastName);
-
-        let tdmailName = document.createElement("td");
-        tdmailName.innerHTML = customer.email;
-        tR.appendChild(tdmailName);
-
-        let tdphone = document.createElement("td");
-        tdphone.innerHTML = customer.telephoneNumber;
-        tR.appendChild(tdphone);
-
-        CtBody.appendChild(tR);
-    })
-
 }
 
 
@@ -66,14 +66,14 @@ form.addEventListener('submit', function (e) {
     customer.lastName = form.elements["surname"].value;
     customer.email = form.elements["mail"].value;
     customer.telephoneNumber = form.elements["phone"].value;
-    customerArray.push(customer);
+    // customerArray.push(customer);
     console.log(customerArray);
 
     // mise a j
     //gestionTableauClient(tab);
-    nouveauGetionClient();
+    nouveauGetionClient(customer);
     form.elements["name"].value = '';
-    form.elements["surname"].value= '';
-    form.elements["mail"].value= '';
-    form.elements["phone"].value= '';
+    form.elements["surname"].value = '';
+    form.elements["mail"].value = '';
+    form.elements["phone"].value = '';
 })

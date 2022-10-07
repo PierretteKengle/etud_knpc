@@ -55,7 +55,7 @@ orderDashboard.appendChild(orderTBody);
  */
 function dasboardOrder() {
     //emptyTable();
-    //recuperation des informations des commandes dans le localstorage
+    //recuperation des informations des commandes dans le localstorage 
     let orderLocal = JSON.parse(window.localStorage.getItem('orderList'));
     if (orderLocal != null) {
 

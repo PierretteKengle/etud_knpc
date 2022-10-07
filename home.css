@@ -1,0 +1,13 @@
+.text{
+    height: 600px;
+    background-image: url('./Order.png');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    color: #fff;
+    justify-content: center;
+    font-family: 'Matura MT Script Capitals', 'Palace Script MT';
+    font-size: 4rem;
+
+}

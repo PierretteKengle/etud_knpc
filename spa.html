@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tefdisign</title>
+    <link rel="stylesheet" href="./awersome/font-awesome-4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+     <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="order.css">
+    <link rel="stylesheet" href="client.css">
+    <link rel="stylesheet" href="style.css" />
+   
+    <style>
+        .hidePage {
+            display: none;
+        }
+    </style>
+    <script>
+
+        function hidePage(pageId) {
+            document.querySelector(`#${pageId}`).classList = 'hidePage';
+        }
+
+        function displayPage(pageId) {
+            document.querySelector(`#${pageId}`).classList = '';
+        }
+
+        function initialPage() {
+            hidePage('customePage');
+            hidePage('orderPage');
+            hidePage('dashbordPage');
+            displayPage('home');
+        }
+        function displayDashboard() {
+            hidePage('home');
+            hidePage('customePage');
+            hidePage('orderPage');
+            displayPage('dashbordPage');
+        }
+
+        function displayCustomer() {
+            hidePage('home');
+            hidePage('dashbordPage');
+            hidePage('orderPage');
+            displayPage('customePage');
+        }
+        function displayOrder() {
+            hidePage('home');
+            hidePage('dashbordPage');
+            hidePage('customePage');
+            displayPage('orderPage');
+        }
+
+    </script>
+</head>
+
+<body onload="initialPage()">
+    <div class="bg-white">
+        <div class=" container row">
+            <nav class="col navbar navbar-expand-lg bg-dark navbar-light " style="position: fixed ; width: 100%;">
+                <a href="#"><i class="fa fa-home text-warning fa-4x">Tefdisign </i></a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div id="navbarContent" class="collapse navbar-collapse">
+                    <ul class="navbar-nav">
+                        <li class="nav-item"><a href="#home.html"
+                                class="nav-link text-light font-weight-bold text-uppercase px-3"
+                                onclick="initialPage()">Home</a></li>
+                        <li class="nav-item active"><a class="nav-link text-light font-weight-bold text-uppercase px-3"
+                                href="#index.html" onclick="displayDashboard()">Dashbord</a></li>
+                        <li class="nav-item"><a class="nav-link text-light font-weight-bold text-uppercase px-3"
+                                href="#client.html" onclick="displayCustomer()">Customer</a></li>
+                        <li class="nav-item"><a class="nav-link text-light font-weight-bold text-uppercase px-3"
+                                href="#order.html" onclick="displayOrder()">Order</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+    <div id="home">
+           
+        <div class="text">
+            <p>
+                Welcome to tefDesign order management
+            </p>
+                
+            
+           </div>
+    </div>
+
+    <div id="dashbordPage">
+        <div id="logo">Tefdisign dashbord</div>
+
+        <div class="d-flex flex-xl-row justify-content-around ">
+            <div class="client"></div>
+            <div class="order"></div>
+            <div class="attente">pending</div>
+        </div>
+
+
+        <section class="d-flex flex-lg-row justify-content-around text-body">
+            <aside class=" bg-light border border-4 m-4 p-2 shadow-sm">
+                <table class="table  table-stiped table-hover 
+                 table-responsive-sm monTableau" id="customerDashboard">
+                    <caption style="caption-side: top;">Customer list</caption>
+                    <thead>
+                        <tr class="entete" style="background-color: rgba(250, 5, 242, 0.679) ;">
+                            <th scope="col">first name</th>
+                            <th scope="col">last name</th>
+                            <th scope="col">email</th>
+                            <th scope="col">telephone number</th>
+                        </tr>
+                    </thead>
+                </table>
+            </aside>
+
+            <article class=" bg-light border border-4 m-4 p-2 shadow-sm">
+                <table class="table  table-stiped table-hover  table-responsive-sm 
+                monTableau" id="orderDashboard">
+                    <caption style="caption-side: top;">Order list</caption>
+                    <thead>
+                        <tr class="entete" style="background-color: rgba(250, 5, 242, 0.679) ;">
+                            <th scope="col">product name</th>
+                            <th scope="col">price</th>
+                            <th scope="col">payment date</th>
+                        </tr>
+                    </thead>
+                </table>
+            </article>
+        </section>
+    </div>
+
+
+
+
+    <div id="customePage">
+
+        <div id="logo">Tefdisign customer</div>
+
+        <section class="d-flex flex-lg-row justify-content-around">
+
+            <article class=" bg-light border border-4 m-4 p-2 shadow-sm">
+
+                <table class="table  table-stiped table-hover  table-responsive-sm monTableau" id="tableau">
+
+                    <caption class="text-body" style="caption-side: top;">Customer list</caption>
+                    <thead>
+                        <tr class="entete" style="background-color: rgba(250, 5, 242, 0.679) ;">
+                            <th scope="col">first name</th>
+                            <th scope="col">last name</th>
+                            <th scope="col">email</th>
+                            <th scope="col">telephone number</th>
+                        </tr>
+                    </thead>
+                </table>
+            </article>
+
+            <aside class=" bg-light border border-4 m-4 p-2 shadow-sm">
+                <!--formulaire-->
+                <form method="post" action="" id="soumission_customer">
+
+                    <fieldset class="d-flex flex-lg-column ">
+                        <legend class="text-body">Add a new customer </legend>
+
+                        <div class="col-8">
+                            <label for="name" class="form-label">Name:</label>
+                            <input type="text" class="form-control" id="nom" name="name" placeholder="client first name"
+                                maxlength="20">
+                        </div>
+
+                        <div class="col-8">
+                            <label for="surname" class="form-label">Surname:</label>
+                            <input type="text" class="form-control" id="prenom" name="surname" placeholder="last name"
+                                maxlength="20">
+                        </div>
+
+                        <div class="col-8">
+                            <label for="mail" class="form-label">E-mail:</label>
+                            <input type="email" class="form-control" id="adresse" name="mail" placeholder="email"
+                                maxlength="60">
+                        </div>
+
+                        <div class="col-8">
+                            <label for="phone" class="form-label">Telephone number:</label>
+                            <input type="tel" class="form-control" id="tele" name="phone" placeholder="telephone number"
+                                maxlength="20">
+                        </div>
+
+                        <div class="col-8">
+                            <input type="submit" class="btn btn-outline-dark" value="save">
+                        </div>
+                    </fieldset>
+                </form>
+            </aside>
+        </section>
+    </div>
+    
+
+    <div id="orderPage">
+
+
+        <div id="logo">Tefdisign order</div>
+        <section class="d-flex flex-lg-row justify-content-around">
+
+            <article class=" bg-light border border-4 m-4 p-2 shadow-sm">
+                <table class="table  table-stiped table-hover  table-responsive-sm monTableau" id="order_table">
+                    <caption class="text-body" style="caption-side: top;">Order list</caption>
+                    <thead>
+                        <tr class="entete" style="background-color: rgba(250, 5, 242, 0.679) ;">
+                            <th scope="col">product name</th>
+                            <th scope="col">price</th>
+                            <th scope="col">payment date</th>
+                        </tr>
+                    </thead>
+                </table>
+            </article>
+
+            <aside class=" bg-light border border-4 m-4 p-2 shadow-sm">
+
+                <form method="post" action="" id="soumission_order">
+                    <fieldset class="d-flex flex-lg-column ">
+                        <legend class="text-body">Add a new order</legend>
+
+                        <div class="col-8">
+                            <label for="product" class="form-label">Product name:</label>
+                            <input type="text" class="form-control" name="product" placeholder="product name"
+                                maxlength="20">
+                        </div>
+
+                        <div class="col-8">
+                            <label for="price" class="form-label">Price:</label>
+                            <input type="text" class="form-control" name="price" placeholder="price" maxlength="20">
+                        </div>
+
+                        <div class="col-8">
+                            <label for="date" class="form-label">Payment date:</label>
+                            <input type="date" class="form-control" name="date" placeholder="payment date"
+                                maxlength="20">
+                        </div>
+
+                        <div class="col-8">
+                            <input type="submit" class="btn btn-outline-dark" value="save">
+                        </div>
+
+                    </fieldset>
+                </form>
+
+            </aside>
+        </section>
+
+    </div>
+    
+
+
+    <footer>
+        <h2 id="contact">-------Contact us----------</h2>
+        <p>
+            <a href="https://www.facebook.com/profile.php?id=100039881052772" class="facebook"><i
+                    class="fa fa-facebook-square fa-3x" style="color: rgba(11, 7, 131, 0.961);"></i></a>
+            <a href="#" class="twitter"><i class="fa fa-twitter-square fa-3x"
+                    style="color: rgba(11, 143, 237, 0.863);"></i></a>
+            <a href="#" class="whatsapp"><i class="fa fa-whatsapp fa-3x" style="color: rgb(22, 187, 88);"></i></a>
+        </p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+        crossorigin="anonymous"></script>
+    <script src="main.js"></script>
+    <script src="script.js"></script>
+    <script src="order.js"></script>
+    <script src="customer.js"></script>
+
+
+</body>
+
+</html>
