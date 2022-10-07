@@ -13,13 +13,42 @@ function getOrder(o) {
 
     /**
   * stockage des informations des commmandes
+  *         let localcustomerArray = new Array();
+        let control = window.localStorage.getItem('customerList');
+        //verification: console.log(control);
+        if (control == null) {
+            localcustomerArray.push(c);
+            window.localStorage.setItem('customerList', JSON.stringify(localcustomerArray));
+
+        }
+        else {
+
+
+            localcustomerArray = JSON.parse(control);
+            localcustomerArray.push(c);
+
+
+            window.localStorage.setItem('customerList', JSON.stringify(localcustomerArray));
+        }
+
   */
     if (typeof (Storage) !== "undefined") {
         // Code for localStorage
-        const localOrderArray = JSON.parse(window.localStorage.getItem('orderList'));
-        localOrderArray.push(o);
+        let localOrderArray = new Array();
+        let orderControl = window.localStorage.getItem('orderList');
+        if (orderControl == null) {
+            localOrderArray.push(o);
+            window.localStorage.setItem('orderList', JSON.stringify(localOrderArray));
 
-        window.localStorage.setItem('orderList', JSON.stringify(localOrderArray));
+        }
+        else {
+
+            localOrderArray = JSON.parse(orderControl);
+            localOrderArray.push(o);
+
+            window.localStorage.setItem('orderList', JSON.stringify(localOrderArray));
+        }
+
 
 
 

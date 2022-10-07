@@ -39,7 +39,14 @@ function dasboardCustomer() {
             customerTBody.appendChild(tR);
         })
     }
-    document.querySelector('.client').innerHTML = customerLocal.length + ' ' + 'customer';
+    if(customerLocal==null)
+    {
+        document.querySelector('.client').innerHTML = 'no customers'
+    }
+    else{
+        document.querySelector('.client').innerHTML = customerLocal.length + ' ' + 'customer';
+    }
+   
 
 };
 
@@ -81,7 +88,14 @@ function dasboardOrder() {
             orderTBody.appendChild(tR);
         })
     }
-    document.querySelector('.order').innerHTML = orderLocal.length + ' ' + 'Order';
+    if(orderLocal==null)
+    {
+        document.querySelector('.order').innerHTML ='no command';
+    }
+    else{
+        document.querySelector('.order').innerHTML = orderLocal.length + ' ' + 'Order';
+    }
+    
 
 
 }

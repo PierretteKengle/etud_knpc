@@ -19,11 +19,24 @@ function nouveauGetionClient(c) {
      */
     if (typeof (Storage) !== "undefined") {
         // Code for localStorage
-        const localcustomerArray = JSON.parse(window.localStorage.getItem('customerList'));
-        localcustomerArray.push(c)
+
+        let localcustomerArray = new Array();
+        let customerControl = window.localStorage.getItem('customerList');
+        //verification: console.log(control);
+        if (customerControl == null) {
+            localcustomerArray.push(c);
+            window.localStorage.setItem('customerList', JSON.stringify(localcustomerArray));
+
+        }
+        else {
 
 
-        window.localStorage.setItem('customerList', JSON.stringify(localcustomerArray));
+            localcustomerArray = JSON.parse(customerControl);
+            localcustomerArray.push(c);
+
+
+            window.localStorage.setItem('customerList', JSON.stringify(localcustomerArray));
+        }
 
         localcustomerArray.forEach(function (customer) {
 
@@ -51,6 +64,7 @@ function nouveauGetionClient(c) {
 
             CtBody.appendChild(tR);
         })
+
     }
 }
 
@@ -66,8 +80,8 @@ form.addEventListener('submit', function (e) {
     customer.lastName = form.elements["surname"].value;
     customer.email = form.elements["mail"].value;
     customer.telephoneNumber = form.elements["phone"].value;
-    // customerArray.push(customer);
-    console.log(customerArray);
+    customerArray.push(customer);
+    //console.log(customerArray);
 
     // mise a j
     //gestionTableauClient(tab);

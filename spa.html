@@ -10,11 +10,11 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-     <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="home.css">
     <link rel="stylesheet" href="order.css">
     <link rel="stylesheet" href="client.css">
     <link rel="stylesheet" href="style.css" />
-   
+
     <style>
         .hidePage {
             display: none;
@@ -41,6 +41,9 @@
             hidePage('customePage');
             hidePage('orderPage');
             displayPage('dashbordPage');
+            emptyTable();
+            dasboardCustomer();
+            dasboardOrder();
         }
 
         function displayCustomer() {
@@ -76,7 +79,7 @@
                                 class="nav-link text-light font-weight-bold text-uppercase px-3"
                                 onclick="initialPage()">Home</a></li>
                         <li class="nav-item active"><a class="nav-link text-light font-weight-bold text-uppercase px-3"
-                                href="#index.html" onclick="displayDashboard()">Dashbord</a></li>
+                                href="#index.html" onclick="displayDashboard() ">Dashbord</a></li>
                         <li class="nav-item"><a class="nav-link text-light font-weight-bold text-uppercase px-3"
                                 href="#client.html" onclick="displayCustomer()">Customer</a></li>
                         <li class="nav-item"><a class="nav-link text-light font-weight-bold text-uppercase px-3"
@@ -88,14 +91,14 @@
     </div>
 
     <div id="home">
-           
+
         <div class="text">
             <p>
                 Welcome to tefDesign order management
             </p>
-                
-            
-           </div>
+
+
+        </div>
     </div>
 
     <div id="dashbordPage">
@@ -204,7 +207,7 @@
             </aside>
         </section>
     </div>
-    
+
 
     <div id="orderPage">
 
@@ -259,7 +262,7 @@
         </section>
 
     </div>
-    
+
 
 
     <footer>
